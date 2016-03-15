@@ -26,7 +26,7 @@ RUN \
   apt-get -y remove git && \
   apt-get clean
     
-ADD Makefile.personal ${TTCN3_SRC}
+ADD Makefile.personal ${TTCN3_SRC}/
 
 WORKDIR ${TTCN3_SRC}
 
