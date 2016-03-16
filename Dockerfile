@@ -24,6 +24,8 @@ RUN \
   apt-get -y install g++ expect libssl-dev libxml2-dev libncurses5-dev flex bison make && \
   apt-get -y install xutils-dev && \
   git clone https://github.com/eclipse/titan.core titan.core && \
+  cd titan.core && \
+  git checkout ${TITAN_VERSION} && \
   apt-get -y remove git && \
   apt-get clean
     
@@ -32,7 +34,6 @@ ADD Makefile.personal ${TTCN3_SRC}/
 WORKDIR ${TTCN3_SRC}
 
 RUN \
-  git checkout ${TITAN_VERSION} && \
   make && \
   make install && \
   rm -rf ${TTCN3_SRC}
