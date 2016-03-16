@@ -5,6 +5,7 @@ MAINTAINER Jiang Ying <jy0000@gmail.com>
 USER root
 
 ENV \
+  TITAN_VERSION=5.4.3 \
   TTCN3_DIR=/usr/local/titan \
   LOCAL_SRC=/usr/local/src
   
@@ -23,6 +24,7 @@ RUN \
   apt-get -y install g++ expect libssl-dev libxml2-dev libncurses5-dev flex bison make && \
   apt-get -y install xutils-dev && \
   git clone https://github.com/eclipse/titan.core titan.core && \
+  git checkout ${TITAN_VERSION} && \
   apt-get -y remove git && \
   apt-get clean
     
