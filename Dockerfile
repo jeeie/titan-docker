@@ -26,6 +26,7 @@ RUN \
   git clone https://github.com/eclipse/titan.core titan.core && \
   cd titan.core && \
   git checkout ${TITAN_VERSION} && \
+  cd .. && \
   apt-get -y remove git && \
   apt-get clean
     
