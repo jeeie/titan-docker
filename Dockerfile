@@ -5,7 +5,7 @@ MAINTAINER Jiang Ying <jy0000@gmail.com>
 USER root
 
 ENV \
-  TITAN_VERSION=5.5.1 \
+  TITAN_VERSION=6.3.1 \
   TTCN3_DIR=/usr/local/titan \
   LOCAL_SRC=/usr/local/src
   
